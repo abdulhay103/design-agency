@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export function NavBar() {
     return (
-        <header className=" pt-4 fixed w-full">
+        <header className=" pt-4 fixed w-full ">
             <div className=" container mx-auto flex justify-between items-center py-4">
                 <div>
                     <Link href="/">
