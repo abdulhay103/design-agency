@@ -28,19 +28,5 @@ export async function BrandList() {
                 </div>
             </div>
         </section>
-        // <div className=" container mx-auto">
-        //     <div className=" flex justify-between">
-        //         {data.map((item, i) => {
-        //             return (
-        //                 <Image
-        //                     key={i}
-        //                     src={item["image"]}
-        //                     width={150}
-        //                     height={10}
-        //                 />
-        //             );
-        //         })}
-        //     </div>
-        // </div>
     );
 }
