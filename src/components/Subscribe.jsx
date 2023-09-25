@@ -1,6 +1,6 @@
 export default function Subscribe() {
     return (
-        <section className=" py-20">
+        <section className=" py-20 bg-white">
             <div className=" container mx-auto">
                 <div className=" w-1/2 mx-auto">
                     <div className="px-5 pb-10">
