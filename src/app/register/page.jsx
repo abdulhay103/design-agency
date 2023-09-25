@@ -1,3 +1,7 @@
 export default function Register() {
-    return <h1>Register Page</h1>;
+    return (
+        <div className=" min-h-screen">
+            <h1>Register Page</h1>
+        </div>
+    );
 }
