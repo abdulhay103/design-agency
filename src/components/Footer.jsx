@@ -13,7 +13,9 @@ export default async function Footer() {
         <footer className=" bg-black text-white py-8">
             <div className=" container mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-32">
                 <div>
-                    <h3 className=" text-xl font-bold py-4">Web Logo</h3>
+                    <h3 className=" text-xl font-bold py-4 uppercase">
+                        Web Logo
+                    </h3>
                     <p>
                         Lorem ipsum, dolor sit amet consectetur adipisicing
                         elit. Aut, magni?
@@ -31,6 +33,7 @@ export default async function Footer() {
                             );
                         })}
                     </div>
+                    <p className=" py-4 italic">Copyright Design Agency 2023</p>
                 </div>
                 <div>
                     <h3 className=" font-bold py-3">Quick Links</h3>
