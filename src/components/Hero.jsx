@@ -29,20 +29,28 @@ export default async function HeroBanner() {
                         </Link>
                     </div>
                 </div>
-                <div>
-                    <div className="flex">
-                        <div className="">
-                            <img src={data["image2"]} alt="Image2" />
+                <div className=" flex gap-6 flex-col">
+                    <div className="flex gap-6">
+                        <div className=" w-1/2 overflow-hidden rounded-md">
+                            <img
+                                className=" w-full"
+                                src={data["image2"]}
+                                alt="Image2"
+                            />
                         </div>
-                        <div className=" flex-grow">
-                            <img src={data["image1"]} alt="Image1" />
+                        <div className=" w-1/4 overflow-hidden rounded-md">
+                            <img
+                                className=" w-full"
+                                src={data["image1"]}
+                                alt="Image1"
+                            />
                         </div>
                     </div>
-                    <div className="flex">
-                        <div className=" flex-grow">
+                    <div className="flex gap-6">
+                        <div className=" flex-grow overflow-hidden rounded-md">
                             <img src={data["image3"]} alt="Image3" />
                         </div>
-                        <div>
+                        <div className="overflow-hidden rounded-md">
                             <img src={data["image4"]} alt="Image4" />
                         </div>
                     </div>
