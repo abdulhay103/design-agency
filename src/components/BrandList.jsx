@@ -9,7 +9,7 @@ export async function BrandList() {
     const data = await getData();
     // console.log(data);
     return (
-        <section className="py-10 bg-white">
+        <section className="py-10 bg-green-50">
             <div className="container mx-auto px-4 text-center">
                 <div className="flex flex-wrap">
                     {data.map((item, i) => {
