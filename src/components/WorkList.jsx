@@ -1,3 +1,5 @@
+import SectionHeader from "./SectionHeader";
+
 async function getData() {
     const res = await fetch(process.env.BASE_URL + "api/WorkList");
     if (!res.ok) {
@@ -8,17 +10,15 @@ async function getData() {
 export default async function WorkList() {
     const data = await getData();
     return (
-        <section className=" bg-white pt-14">
+        <section className=" bg-white py-20">
             <div className=" container mx-auto">
-                <div className=" w-1/2">
-                    <p className=" uppercase text-green-500 font-medium text-lg">
-                        Work List
-                    </p>
-                    <h3 className=" text-3xl font-semibold py-3">
-                        We provide the Perfect Solution to your business growth
-                    </h3>
-                </div>
-                <div className="py-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <SectionHeader
+                    sectionHeader={{
+                        title: "Work List",
+                        desc: "We provide the Perfect Solution to your business growth",
+                    }}
+                />
+                <div className="pt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {data.map((item) => {
                         return (
                             <div

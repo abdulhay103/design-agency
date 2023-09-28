@@ -1,6 +1,5 @@
-import { BrandList } from "@/components/BrandList";
+import FeatureProject from "@/components/FeatureProject";
 import HeroBanner from "@/components/Hero";
-import SectionHeader from "@/components/SectionHeader";
 import StatList from "@/components/StatList";
 import Subscribe from "@/components/Subscribe";
 import WorkList from "@/components/WorkList";
@@ -11,6 +10,7 @@ export default function Home() {
             <HeroBanner />
             <WorkList />
             <StatList />
+            <FeatureProject />
             <Subscribe />
         </main>
     );
