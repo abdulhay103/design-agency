@@ -7,7 +7,7 @@ async function getData() {
     return res.json();
 }
 
-export default async function AllProject() {
+export default async function AllServices() {
     const data = await getData();
     return (
         <section className=" py-16 bg-neutral-50">
