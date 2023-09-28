@@ -1,3 +1,4 @@
+import AllProject from "@/components/AllProjects";
 import SectionHeader from "@/components/PageHeader";
 import Subscribe from "@/components/Subscribe";
 
@@ -7,7 +8,7 @@ export default function Services() {
             <SectionHeader
                 subHeader={{ title: "Services", subTitle: "services" }}
             />
-            <h1>Services Page</h1>
+            <AllProject />
             <Subscribe />
         </div>
     );
