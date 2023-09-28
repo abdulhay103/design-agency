@@ -3,6 +3,7 @@ import SectionHeader from "./SectionHeader";
 import TeamMember1 from "../../public/Team/team-member1.png";
 import TeamMember2 from "../../public/Team/team-member2.png";
 import TeamMember3 from "../../public/Team/team-member3.png";
+import Link from "next/link";
 
 async function getData() {
     const res = await fetch(process.env.BASE_URL + "api/TeamList");
@@ -25,8 +26,8 @@ export default async function Team() {
                     }}
                 />
                 <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-10">
-                    <div className=" rounded-lg overflow-hidden shadow-md">
-                        <div className=" overflow-hidden">
+                    <div className=" rounded-lg overflow-hidden shadow-md border-2 border-slate-200">
+                        <div className=" overflow-hidden ">
                             <Image
                                 className=" object-cover"
                                 src={TeamMember1}
@@ -38,6 +39,9 @@ export default async function Team() {
                         <h3 className="text-gray-900 text-2xl font-semibold text-center py-4">
                             Devon Lane
                         </h3>
+                        <div>
+                            <Link href={"#"}>F</Link>
+                        </div>
                     </div>
                     <div className=" rounded-lg overflow-hidden shadow-md">
                         <div className=" overflow-hidden">
