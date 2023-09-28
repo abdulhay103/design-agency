@@ -10,7 +10,7 @@ export default async function StatList() {
     return (
         <section className=" bg-white py-10">
             <div className="container mx-auto">
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 pb-8">
                     <div className=" shadow p-6 flex flex-col items-center rounded">
                         <div className=" w-14 h-14 bg-green-100 flex justify-center items-center rounded-lg my-2">
                             <svg

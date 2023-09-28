@@ -1,4 +1,4 @@
-import SectionHeader from "@/components/SectionHeader";
+import SectionHeader from "@/components/PageHeader";
 import Subscribe from "@/components/Subscribe";
 
 export default function Projects() {
