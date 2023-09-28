@@ -1,11 +1,12 @@
 import SectionHeader from "@/components/PageHeader";
 import Subscribe from "@/components/Subscribe";
+import Team from "@/components/Team";
 
-export default function Team() {
+export default function TeamList() {
     return (
         <div>
             <SectionHeader subHeader={{ title: "Team", subTitle: "team" }} />
-            <h1>Team Page</h1>
+            <Team />
             <Subscribe />
         </div>
     );
