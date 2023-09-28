@@ -1,4 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
+import { BrandList } from "./BrandList";
 
 async function getData() {
     const res = await fetch(process.env.BASE_URL + "api/HeroList");
@@ -11,9 +13,9 @@ export default async function HeroBanner() {
     const data = await getData();
     console.log(data);
     return (
-        <section className=" bg-green-100 py-20">
-            <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 py-10 xl:py-24">
-                <div>
+        <section className=" bg-green-100 pt-20 pb-14">
+            <div className="container mx-auto grid grid-cols-12 justify-between py-10 xl:py-24">
+                <div className=" col-span-5">
                     <h1 className=" text-5xl font-bold py-5">
                         {data["title"]}
                     </h1>
@@ -29,33 +31,27 @@ export default async function HeroBanner() {
                         </Link>
                     </div>
                 </div>
-                <div className=" flex gap-6 flex-col">
-                    <div className="flex gap-6">
-                        <div className=" w-1/2 overflow-hidden rounded-md">
-                            <img
-                                className=" w-full"
-                                src={data["image2"]}
-                                alt="Image2"
-                            />
+                <div className=" col-span-1"></div>
+                <div className=" col-span-6 flex flex-col gap-6">
+                    <div className="grid grid-cols-12 gap-6 h-[200px]">
+                        <div className=" col-span-8 overflow-hidden rounded-md">
+                            <Image src={data["image2"]} alt="Image2" width={500} height={500} />
                         </div>
-                        <div className=" w-1/4 overflow-hidden rounded-md">
-                            <img
-                                className=" w-full"
-                                src={data["image1"]}
-                                alt="Image1"
-                            />
+                        <div className=" col-span-4 rounded-md overflow-hidden">
+                            <Image src={data["image1"]}  alt="Image1" width={500} height={500}/>
                         </div>
                     </div>
-                    <div className="flex gap-6">
-                        <div className=" flex-grow overflow-hidden rounded-md">
-                            <img src={data["image3"]} alt="Image3" />
+                    <div className="grid grid-cols-12 gap-6 h-40">
+                        <div className=" col-span-4 rounded-md overflow-hidden">
+                            <Image src={data["image4"]} alt="Image3" width={500} height={500}/>
                         </div>
-                        <div className="overflow-hidden rounded-md">
-                            <img src={data["image4"]} alt="Image4" />
+                        <div className=" col-span-8 rounded-md overflow-hidden">
+                            <Image src={data["image3"]} alt="Image4" width={500} height={500} />
                         </div>
                     </div>
                 </div>
             </div>
+            <BrandList/>
         </section>
     );
 }

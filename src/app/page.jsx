@@ -9,7 +9,6 @@ export default function Home() {
     return (
         <main className=" bg-green-200 min-h-screen">
             <HeroBanner />
-            <BrandList />
             <WorkList />
             <StatList />
             <Subscribe />
