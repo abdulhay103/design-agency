@@ -20,7 +20,7 @@ export default async function FeatureProject() {
     console.log(data[2]["title"]);
     return (
         <section className=" py-20">
-            <div className=" container mx-auto">
+            <div className=" container mx-auto px-6 md:px-0 lg:px-0">
                 <SectionHeader
                     sectionHeader={{
                         title: "Featured Project",

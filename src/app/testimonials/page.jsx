@@ -1,3 +1,4 @@
+import AllTestimonial from "@/components/AllTestimonial";
 import SectionHeader from "@/components/PageHeader";
 import Subscribe from "@/components/Subscribe";
 
@@ -7,7 +8,7 @@ export default function Testimonials() {
             <SectionHeader
                 subHeader={{ title: "Testimonial", subTitle: "testimonials" }}
             />
-            <h1>Testimonial Page</h1>
+            <AllTestimonial />
             <Subscribe />
         </div>
     );

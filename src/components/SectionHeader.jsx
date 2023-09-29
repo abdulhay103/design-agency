@@ -2,7 +2,7 @@ export default function SectionHeader({ sectionHeader }) {
     const { title, desc } = sectionHeader;
     return (
         <>
-            <div className=" w-1/2">
+            <div className=" w-full md:w-1/2 lg:w-1/2">
                 <p className=" uppercase text-green-500 font-medium text-lg">
                     {title}
                 </p>

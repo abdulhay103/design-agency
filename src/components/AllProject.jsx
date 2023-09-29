@@ -13,7 +13,7 @@ export default async function AllProject() {
     console.log(data);
     return (
         <section className=" py-16 bg-neutral-50">
-            <div className="container mx-auto">
+            <div className="container mx-auto px-6 md:px-0 lg:px-0">
                 <SectionHeader
                     sectionHeader={{
                         title: "All Project",
