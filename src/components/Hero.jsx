@@ -13,8 +13,8 @@ export default async function HeroBanner() {
     const data = await getData();
     return (
         <section className=" bg-green-100 pt-20 pb-14">
-            <div className="container mx-auto grid grid-cols-12 justify-between py-10 xl:py-24">
-                <div className=" col-span-5">
+            <div className="container mx-auto grid grid-cols-12 justify-between py-10 xl:py-24 px-6 md:px-0 lg:px-0">
+                <div className=" col-span-12 md:lg:col-span-5">
                     <h1 className=" text-5xl font-bold py-5">
                         {data["title"]}
                     </h1>
@@ -30,8 +30,8 @@ export default async function HeroBanner() {
                         </Link>
                     </div>
                 </div>
-                <div className=" col-span-1"></div>
-                <div className=" col-span-6 flex flex-col gap-6">
+                <div className=" col-span-12 md:lg:col-span-1 py-10"></div>
+                <div className=" col-span-12 md:lg:col-span-6 flex flex-col gap-6">
                     <div className="grid grid-cols-12 gap-6 h-[200px]">
                         <div className=" col-span-8 overflow-hidden rounded-md">
                             <Image
