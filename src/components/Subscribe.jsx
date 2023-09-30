@@ -17,7 +17,7 @@ export default function Subscribe() {
                     </div>
                     <div className=" flex border border-black rounded-md justify-between">
                         <input
-                            className="px-6 py-4 focus:outline-none rounded-md placeholder:text-zinc-500"
+                            className="px-6 py-4 focus:outline-none rounded-md placeholder:text-zinc-500 w-full"
                             type="email"
                             name="email"
                             id="email"
