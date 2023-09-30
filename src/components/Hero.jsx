@@ -34,7 +34,7 @@ export default async function HeroBanner() {
                         </Link>
                     </div>
                 </div>
-                <div className=" col-span-12 md:lg:col-span-1 py-10"></div>
+                <div className=" col-span-12 md:lg:col-span-1 py-0 md:lg:py-10"></div>
                 <div className=" col-span-12 md:lg:col-span-6 flex flex-col gap-6">
                     <div className="grid grid-cols-12 gap-6 h-[275px]">
                         <div className=" col-span-8 rounded-lg overflow-hidden w-full h-full">
