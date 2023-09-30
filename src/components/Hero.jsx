@@ -15,6 +15,7 @@ async function getData() {
 }
 export default async function HeroBanner() {
     const data = await getData();
+    console.log(data);
     return (
         <section className=" bg-green-100 pt-20 pb-14">
             <div className="container mx-auto grid grid-cols-12 justify-between py-10 xl:py-24 px-6 md:px-0 lg:px-0">
@@ -35,9 +36,9 @@ export default async function HeroBanner() {
                     </div>
                 </div>
                 <div className=" col-span-12 md:lg:col-span-1 py-10"></div>
-                <div className=" col-span-12 md:lg:col-span-6 flex flex-col gap-6">
-                    <div className="grid grid-cols-12 gap-6 h-[150px] md:lg:h-[275px]">
-                        <div className=" col-span-8 rounded-lg overflow-hidden w-full h-full">
+                <div className=" col-span-12 md:lg:col-span-6">
+                    <div className="grid  grid-cols-12 gap-6">
+                        <div className=" col-span-8">
                             <Image
                                 src={HeroImage1}
                                 alt="Image1"
@@ -49,7 +50,7 @@ export default async function HeroBanner() {
                                 }}
                             />
                         </div>
-                        <div className=" col-span-4 rounded-lg overflow-hidden w-full h-full">
+                        <div className=" col-span-4">
                             <Image
                                 src={HeroImage2}
                                 alt="Image2"
@@ -57,20 +58,16 @@ export default async function HeroBanner() {
                                 height={500}
                             />
                         </div>
-                    </div>
-                    <div className="grid grid-cols-12 gap-6 h-40">
-                        <div className=" col-span-4 rounded-lg overflow-hidden">
-                            <Image
-                                src={HeroImage3}
-                                alt="Image3"
-                                width={500}
-                                height={500}
-                                style={{
-                                    objectFit: "cover",
-                                }}
-                            />
+                        <div className=" col-span-4">
+                            <div className=" w-full h-full">
+                                <img
+                                    className=" h-full w-full object-cover rounded-lg"
+                                    src={data["image3"]}
+                                    alt="images"
+                                />
+                            </div>
                         </div>
-                        <div className=" col-span-8 rounded-lg overflow-hidden h-full w-full">
+                        <div className=" col-span-8">
                             <Image
                                 src={HeroImage4}
                                 alt="Image4"
