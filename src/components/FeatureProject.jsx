@@ -51,7 +51,7 @@ export default async function FeatureProject() {
                         </div>
                     </div>
                     <div className=" col-span-12 md:col-span-6 lg:col-span-6">
-                        <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5">
+                        <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
                             <div className=" card overflow-hidden rounded-lg">
                                 <div className=" hover:scale-105 transition duration-300">
                                     <Image
