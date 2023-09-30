@@ -25,7 +25,7 @@ export default async function HeroBanner() {
                     <p className=" text-xl font-medium py-4">
                         {data["description"]}
                     </p>
-                    <div className="pt-16">
+                    <div className=" pt-10 md:lg:pt-16">
                         <Link
                             className=" px-7 py-4 transition-all duration-300 text-lg font-bold bg-green-500 border-2 border-green-500 hover:bg-transparent rounded-xl text-white hover:text-black"
                             href="#"
@@ -34,9 +34,9 @@ export default async function HeroBanner() {
                         </Link>
                     </div>
                 </div>
-                <div className=" col-span-12 md:lg:col-span-1 py-0 md:lg:py-10"></div>
+                <div className=" col-span-12 md:lg:col-span-1 py-10"></div>
                 <div className=" col-span-12 md:lg:col-span-6 flex flex-col gap-6">
-                    <div className="grid grid-cols-12 gap-6 h-[275px]">
+                    <div className="grid grid-cols-12 gap-6 h-[150px] md:lg:h-[275px]">
                         <div className=" col-span-8 rounded-lg overflow-hidden w-full h-full">
                             <Image
                                 src={HeroImage1}
