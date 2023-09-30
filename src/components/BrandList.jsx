@@ -7,7 +7,7 @@ async function getData() {
 }
 export async function BrandList() {
     const data = await getData();
-    // console.log(data);
+
     return (
         <section className="py-10 bg-white">
             <div className="container mx-auto text-center px-6 md:px-0 lg:px-0">

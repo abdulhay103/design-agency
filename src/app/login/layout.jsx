@@ -1,6 +1,6 @@
 export async function generateMetadata() {
     return {
-        title: "Login",
+        title: "Design-Agency || Login",
     };
 }
 
