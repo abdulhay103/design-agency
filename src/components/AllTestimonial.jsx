@@ -11,7 +11,6 @@ async function getData() {
 
 export default async function AllTestimonial() {
     const data = await getData();
-    console.log(data);
     return (
         <section className=" py-16">
             <div className="container mx-auto px-6 md:px-0 lg:px-0">

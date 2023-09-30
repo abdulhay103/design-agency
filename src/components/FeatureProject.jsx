@@ -17,7 +17,6 @@ async function getData() {
 
 export default async function FeatureProject() {
     const data = await getData();
-    console.log(data[2]["title"]);
     return (
         <section className=" py-20">
             <div className=" container mx-auto px-6 md:px-0 lg:px-0">
@@ -29,14 +28,14 @@ export default async function FeatureProject() {
                 />
                 <div className=" grid grid-cols-12 pt-10 gap-5">
                     <div className=" col-span-12 md:col-span-6 lg:col-span-6">
-                        <div className="overflow-hidden">
-                            <div className=" rounded-md overflow-hidden hover:scale-105 transition">
+                        <div className="overflow-hidden rounded-xl">
+                            <div className=" rounded-md hover:overflow-hidden hover:scale-105 transition duration-300 w-full h-full">
                                 <Image
                                     src={FeatureImg1}
                                     alt=""
                                     height={1000}
                                     width={1000}
-                                    style={{ objectFit: "cover" }}
+                                    style={{ objectFit: "contain" }}
                                 />
                             </div>
                             <p className=" text-slate-700 text-sm pt-4">
@@ -53,8 +52,8 @@ export default async function FeatureProject() {
                     </div>
                     <div className=" col-span-12 md:col-span-6 lg:col-span-6">
                         <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5">
-                            <div className=" card overflow-hidden">
-                                <div className=" rounded-md overflow-hidden hover:scale-105 transition">
+                            <div className=" card overflow-hidden rounded-lg">
+                                <div className=" hover:scale-105 transition duration-300">
                                     <Image
                                         src={FeatureImg2}
                                         alt=""
@@ -74,8 +73,8 @@ export default async function FeatureProject() {
                                     {data[1]["title"]}
                                 </Link>
                             </div>
-                            <div className=" card overflow-hidden">
-                                <div className=" rounded-md overflow-hidden hover:scale-105 transition">
+                            <div className=" card overflow-hidden rounded-lg">
+                                <div className="hover:scale-105 transition duration-300">
                                     <Image
                                         src={FeatureImg3}
                                         alt=""
@@ -95,8 +94,8 @@ export default async function FeatureProject() {
                                     {data[2]["title"]}
                                 </Link>
                             </div>
-                            <div className=" card overflow-hidden">
-                                <div className=" rounded-md overflow-hidden hover:scale-105 transition">
+                            <div className=" card overflow-hidden rounded-lg">
+                                <div className=" hover:scale-105 transition duration-300">
                                     <Image
                                         src={FeatureImg4}
                                         alt=""
@@ -116,8 +115,8 @@ export default async function FeatureProject() {
                                     {data[3]["title"]}
                                 </Link>
                             </div>
-                            <div className=" card overflow-hidden">
-                                <div className=" rounded-md overflow-hidden hover:scale-105 transition">
+                            <div className=" card overflow-hidden rounded-lg">
+                                <div className=" hover:scale-105 transition duration-300">
                                     <Image
                                         src={FeatureImg5}
                                         alt=""

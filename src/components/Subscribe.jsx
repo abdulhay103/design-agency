@@ -15,16 +15,16 @@ export default function Subscribe() {
                             about what we do
                         </p>
                     </div>
-                    <div className=" flex border border-black rounded-md">
+                    <div className=" flex border border-black rounded-md justify-between">
                         <input
-                            className=" w-4/5 px-6 py-4 focus:outline-none rounded-md placeholder:text-zinc-500"
+                            className="px-6 py-4 focus:outline-none rounded-md placeholder:text-zinc-500"
                             type="email"
                             name="email"
                             id="email"
                             placeholder="Enter Your Email Address"
                         />
                         <button
-                            className=" bg-orange-600 w-1/5 text-white rounded-md m-1"
+                            className=" bg-orange-600 text-white rounded-md m-1 px-4"
                             type="submit"
                         >
                             Subscribe
