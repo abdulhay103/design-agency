@@ -9,6 +9,7 @@ async function getData() {
 
 export default async function AllServices() {
     const data = await getData();
+    console.log(data);
     return (
         <section className=" py-16 bg-neutral-50">
             <div className="container mx-auto px-6 md:px-0 lg:px-0">
@@ -33,36 +34,41 @@ export default async function AllServices() {
                                         {item["des"]}
                                     </p>
                                 </div>
-                                <div className="grid gap-5 lg:gap-7">
-                                    <div className="grid grid-cols-12 gap-5 lg:gap-7 h-40">
-                                        <div className=" col-span-7 rounded-lg overflow-hidden">
+                                <div className="grid grid-cols-12 gap-5 lg:gap-7">
+                                    <div className=" col-span-7">
+                                        <div className=" w-full h-32 md:lg:h-40 overflow-hidden">
                                             <img
+                                                className=" w-full h-full object-cover rounded-lg"
                                                 src={item["image1"]}
-                                                alt=""
-                                                className=" object-cover"
-                                            />
-                                        </div>
-                                        <div className=" col-span-5 rounded-lg overflow-hidden">
-                                            <img
-                                                src={item["image2"]}
-                                                alt=""
-                                                className=" object-cover"
+                                                alt="image"
                                             />
                                         </div>
                                     </div>
-                                    <div className="grid grid-cols-12 gap-5 lg:gap-7 h-64">
-                                        <div className=" col-span-6 rounded-lg overflow-hidden">
+                                    <div className=" col-span-5">
+                                        <div className=" w-full h-32 md:lg:h-40 overflow-hidden">
                                             <img
-                                                src={item["image3"]}
-                                                alt=""
-                                                className=" object-cover"
+                                                className=" w-full h-full object-cover rounded-lg"
+                                                src={item["image2"]}
+                                                alt="image"
                                             />
                                         </div>
-                                        <div className=" col-span-6 rounded-lg overflow-hidden">
+                                    </div>
+
+                                    <div className=" col-span-6">
+                                        <div className=" w-full h-48 md:lg:h-64 overflow-hidden">
                                             <img
+                                                className=" w-full h-full object-cover rounded-lg"
+                                                src={item["image3"]}
+                                                alt="image"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div className=" col-span-6 rounded-lg overflow-hidden">
+                                        <div className=" w-full h-48 md:lg:h-64 overflow-hidden">
+                                            <img
+                                                className=" w-full h-full object-cover rounded-lg"
                                                 src={item["image4"]}
-                                                alt=""
-                                                className=" object-cover"
+                                                alt="image"
                                             />
                                         </div>
                                     </div>
