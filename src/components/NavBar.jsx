@@ -1,12 +1,16 @@
 "use client";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { HiAdjustments } from "react-icons/hi";
 
 export function NavBar() {
-    const [toogle, setToogle] = useState(false);
-    const menuHandler = () => {};
+    const [isToggle, setIsToggole] = useState(false);
+    const menuHandler = () => {
+        setIsToggole(!isToggle);
+    };
     return (
-        <header className=" pt-4 fixed w-full">
+        <header className=" pt-4 fixed w-full bg-green-100 py-3 z-50">
             <div className=" container mx-auto">
                 <div className="grid grid-cols-12 justify-between md:lg:items-center px-6 md:px-0 lg:px-0">
                     <div className=" col-span-6 md:lg:col-span-2">
@@ -16,10 +20,18 @@ export function NavBar() {
                         </Link>
                     </div>
                     <div className="col-span-6 md:lg:hidden text-right">
-                        <button>Menu</button>
+                        <button onClick={menuHandler}>
+                            {isToggle ? "Show Menu" : "Hide Menu"}
+                        </button>
                     </div>
                     <div className="col-span-12 md:lg:col-span-10">
-                        <div className="flex flex-col md:lg:flex-row gap-3 md:lg:gap-6 items-center justify-end bg-white md:lg:bg-transparent rounded-xl md:lg:rounded-none mt-5 md:lg:mt-0 shadow md:lg:shadow-none py-5 ">
+                        <div
+                            className={
+                                isToggle
+                                    ? " hidden"
+                                    : "flex flex-col md:lg:flex-row gap-3 md:lg:gap-6 items-center justify-end bg-white md:lg:bg-transparent rounded-xl md:lg:rounded-none mt-5 md:lg:mt-0 shadow md:lg:shadow-none py-5 "
+                            }
+                        >
                             <Link className=" px-3 py-2" href="/">
                                 Home
                             </Link>
