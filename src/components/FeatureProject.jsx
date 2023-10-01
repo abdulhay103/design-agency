@@ -26,16 +26,14 @@ export default async function FeatureProject() {
                         desc: "We provide the Perfect Solution to your business growth",
                     }}
                 />
-                <div className=" grid grid-cols-12 pt-10 gap-5">
-                    <div className=" col-span-12 md:col-span-6 lg:col-span-6">
-                        <div className="overflow-hidden rounded-xl">
-                            <div className=" rounded-md hover:overflow-hidden hover:scale-105 transition duration-300 w-full h-full">
-                                <Image
-                                    src={FeatureImg1}
-                                    alt=""
-                                    height={1000}
-                                    width={1000}
-                                    style={{ objectFit: "contain" }}
+                <div className=" grid grid-rows-2 grid-cols-4 g pt-10 gap-8">
+                    <div className="row-span-1 md:lg:row-span-2 col-span-4 md:lg:col-span-2">
+                        <div className=" w-full h-full">
+                            <div className=" w-full h-[300px] md:lg:h-[505px] overflow-hidden rounded-lg">
+                                <img
+                                    className=" h-full w-full object-cover hover:scale-105 transition duration-300"
+                                    src={data[0]["image"]}
+                                    alt="images"
                                 />
                             </div>
                             <p className=" text-slate-700 text-sm pt-4">
@@ -50,93 +48,81 @@ export default async function FeatureProject() {
                             </Link>
                         </div>
                     </div>
-                    <div className=" col-span-12 md:col-span-6 lg:col-span-6">
-                        <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-                            <div className=" card overflow-hidden rounded-lg">
-                                <div className=" hover:scale-105 transition duration-300">
-                                    <Image
-                                        src={FeatureImg2}
-                                        alt=""
-                                        height={500}
-                                        width={500}
-                                        style={{ objectFit: "cover" }}
-                                    />
-                                </div>
-                                <p className=" text-slate-700 text-sm pt-4">
-                                    {data[1]["remark"]}
-                                </p>
-                                <Link
-                                    className=" text-indigo-950 text-xl font-bold"
-                                    href={data[1]["live"]}
-                                    target=" _blank"
-                                >
-                                    {data[1]["title"]}
-                                </Link>
-                            </div>
-                            <div className=" card overflow-hidden rounded-lg">
-                                <div className="hover:scale-105 transition duration-300">
-                                    <Image
-                                        src={FeatureImg3}
-                                        alt=""
-                                        height={500}
-                                        width={500}
-                                        style={{ objectFit: "cover" }}
-                                    />
-                                </div>
-                                <p className=" text-slate-700 text-sm pt-4">
-                                    {data[2]["remark"]}
-                                </p>
-                                <Link
-                                    className=" text-indigo-950 text-xl font-bold"
-                                    href={data[2]["live"]}
-                                    target=" _blank"
-                                >
-                                    {data[2]["title"]}
-                                </Link>
-                            </div>
-                            <div className=" card overflow-hidden rounded-lg">
-                                <div className=" hover:scale-105 transition duration-300">
-                                    <Image
-                                        src={FeatureImg4}
-                                        alt=""
-                                        height={500}
-                                        width={500}
-                                        style={{ objectFit: "cover" }}
-                                    />
-                                </div>
-                                <p className=" text-slate-700 text-sm pt-4">
-                                    {data[3]["remark"]}
-                                </p>
-                                <Link
-                                    className=" text-indigo-950 text-xl font-bold"
-                                    href={data[1]["live"]}
-                                    target=" _blank"
-                                >
-                                    {data[3]["title"]}
-                                </Link>
-                            </div>
-                            <div className=" card overflow-hidden rounded-lg">
-                                <div className=" hover:scale-105 transition duration-300">
-                                    <Image
-                                        src={FeatureImg5}
-                                        alt=""
-                                        height={500}
-                                        width={500}
-                                        style={{ objectFit: "cover" }}
-                                    />
-                                </div>
-                                <p className=" text-slate-700 text-sm pt-4">
-                                    {data[4]["remark"]}
-                                </p>
-                                <Link
-                                    className=" text-indigo-950 text-xl font-bold"
-                                    href={data[4]["live"]}
-                                    target=" _blank"
-                                >
-                                    {data[5]["title"]}
-                                </Link>
-                            </div>
+                    <div className="col-span-4 md:lg:col-span-1">
+                        <div className=" w-full h-[300px] md:lg:h-[190px] overflow-hidden rounded-lg">
+                            <img
+                                className="h-full w-full object-cover hover:scale-105 transition duration-300"
+                                src={data[1]["image"]}
+                                alt="Images"
+                            />
                         </div>
+                        <p className=" text-slate-700 text-sm pt-4">
+                            {data[1]["remark"]}
+                        </p>
+                        <Link
+                            className=" text-indigo-950 text-xl font-bold"
+                            href={data[1]["live"]}
+                            target=" _blank"
+                        >
+                            {data[1]["title"]}
+                        </Link>
+                    </div>
+                    <div className="col-span-4 md:lg:col-span-1">
+                        <div className=" w-full h-[300px] md:lg:h-[190px] overflow-hidden rounded-lg">
+                            <img
+                                className="h-full w-full object-cover hover:scale-105 transition duration-300"
+                                src={data[2]["image"]}
+                                alt="Images"
+                            />
+                        </div>
+                        <p className=" text-slate-700 text-sm pt-4">
+                            {data[2]["remark"]}
+                        </p>
+                        <Link
+                            className=" text-indigo-950 text-xl font-bold"
+                            href={data[2]["live"]}
+                            target=" _blank"
+                        >
+                            {data[2]["title"]}
+                        </Link>
+                    </div>
+                    <div className="col-span-4 md:lg:col-span-1">
+                        <div className=" w-full h-[300px] md:lg:h-[190px] overflow-hidden rounded-lg">
+                            <img
+                                className="h-full w-full object-cover hover:scale-105 transition duration-300"
+                                src={data[3]["image"]}
+                                alt="Images"
+                            />
+                        </div>
+                        <p className=" text-slate-700 text-sm pt-4">
+                            {data[3]["remark"]}
+                        </p>
+                        <Link
+                            className=" text-indigo-950 text-xl font-bold"
+                            href={data[3]["live"]}
+                            target=" _blank"
+                        >
+                            {data[3]["title"]}
+                        </Link>
+                    </div>
+                    <div className="col-span-4 md:lg:col-span-1">
+                        <div className=" w-full h-[300px] md:lg:h-[190px] overflow-hidden rounded-lg">
+                            <img
+                                className="h-full w-full object-cover hover:scale-105 transition duration-300"
+                                src={data[4]["image"]}
+                                alt="Images"
+                            />
+                        </div>
+                        <p className=" text-slate-700 text-sm pt-4">
+                            {data[4]["remark"]}
+                        </p>
+                        <Link
+                            className=" text-indigo-950 text-xl font-bold"
+                            href={data[4]["live"]}
+                            target=" _blank"
+                        >
+                            {data[4]["title"]}
+                        </Link>
                     </div>
                 </div>
             </div>
