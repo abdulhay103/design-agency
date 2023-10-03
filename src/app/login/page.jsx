@@ -1,6 +1,17 @@
+"use client";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function Login() {
+    const [inputValues, setInputValues] = useState({
+        email: "",
+        password: "",
+    });
+
+    const onSubmitHandler = (name, value) => {
+        setInputValues({ ...inputValues, [name]: value });
+    };
+
     return (
         <main className="  bg-gradient-to-tr from-white via-gray-100 to-green-100">
             <div className=" min-h-screen inset-0 flex justify-center items-center px-6 py-14">
@@ -10,6 +21,10 @@ export default function Login() {
                     </h3>
                     <div className=" flex flex-col gap-8 w-full">
                         <input
+                            onSubmit={(e) =>
+                                onSubmitHandler("email", e.target.value)
+                            }
+                            value={inputValues.email}
                             className=" px-5 py-3 ring-2 rounded ring-gray-300 focus:outline-none"
                             type="text"
                             name="name"
@@ -18,6 +33,10 @@ export default function Login() {
                             required
                         />
                         <input
+                            onSubmit={(e) =>
+                                onSubmitHandler("pessword", e.target.value)
+                            }
+                            value={inputValues.password}
                             className=" px-5 py-3 ring-2 rounded ring-gray-300 focus:outline-none"
                             type="password"
                             name="name"
