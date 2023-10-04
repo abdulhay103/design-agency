@@ -1,15 +1,47 @@
 "use client";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 export default function Login() {
+    const router = useRouter();
+    const [isLoading, setLoading] = useState(false);
     const [inputValues, setInputValues] = useState({
         email: "",
         password: "",
     });
 
-    const onSubmitHandler = (name, value) => {
+    const onChangeHandler = (name, value) => {
         setInputValues({ ...inputValues, [name]: value });
+    };
+    const onClickHandler = async () => {
+        setLoading(true);
+        if (inputValues.email.length === 0) {
+            alert("Email Required!");
+        } else if (inputValues.password.length === 0) {
+            alert("Password Required!");
+        } else {
+            try {
+                const config = {
+                    method: "POST",
+                    body: JSON.stringify(inputValues),
+                };
+                const res = await fetch("api/login", config);
+                const jsonBody = await res.json();
+                let email = jsonBody.email;
+                console.log(email);
+
+                if (jsonBody.status === true) {
+                    router.replace("/dashboard");
+                    setLoading(false);
+                } else {
+                    alert(jsonBody.msg);
+                }
+            } catch (error) {
+                console.error("Error:", error);
+                setLoading(false);
+            }
+        }
     };
 
     return (
@@ -21,35 +53,36 @@ export default function Login() {
                     </h3>
                     <div className=" flex flex-col gap-8 w-full">
                         <input
-                            onSubmit={(e) =>
-                                onSubmitHandler("email", e.target.value)
+                            onChange={(e) =>
+                                onChangeHandler("email", e.target.value)
                             }
                             value={inputValues.email}
                             className=" px-5 py-3 ring-2 rounded ring-gray-300 focus:outline-none"
                             type="text"
                             name="name"
-                            id="#"
+                            id="email"
                             placeholder="Email"
                             required
                         />
                         <input
-                            onSubmit={(e) =>
-                                onSubmitHandler("pessword", e.target.value)
+                            onChange={(e) =>
+                                onChangeHandler("password", e.target.value)
                             }
                             value={inputValues.password}
                             className=" px-5 py-3 ring-2 rounded ring-gray-300 focus:outline-none"
                             type="password"
                             name="name"
-                            id="#"
+                            id="password"
                             placeholder="Password"
                             required
                         />
                     </div>
                     <button
+                        onSubmit={onClickHandler}
                         className="px-8 mt-8 py-3 border border-green-500 bg-green-500 text-white text-lg font-semibold rounded-md hover:bg-transparent hover:text-black"
                         type="submit"
                     >
-                        Login
+                        {isLoading ? "Please Wait.." : "Login"}
                     </button>
                     <p className=" text-gray-600 text-lg py-3">
                         If you aren&lsquo;t registered ?
